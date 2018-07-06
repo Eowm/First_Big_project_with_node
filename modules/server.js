@@ -2,20 +2,24 @@ var http = require('http');
 var colors = require('colors');
 var handlers = require('./handlers')
 
+
+
 function start() {
   function onRequest(request, response) {
     console.log("Odebrano zapytanie.");
-    console.log("Zapytanie " + request.url + " odebrane.");
-
+    console.log("Zapytanie " + request.url + " odebrane.");	
     response.writeHead(200, {"Content-Type": "text/plain; charset=utf-8"});
-
+    console.log(request.url);
     switch (request.url) { // switch rozróżniający zapytania
         case '/':
         case '/start':
-            handlers.welcome(request, response);
+            handlers.welcome(request, response);  
             break;
-        case '/upload':
-            handlers.upload(request, response);
+        case '/style.css':
+            handlers.css(request, response);  
+            break;
+        case '/style1.css':
+            handlers.css1(request, response);
             break;
         case '/show':
     		handlers.show(request, response);

@@ -1,0 +1,40 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: black;
+	color: white;
+	margin: 200px auto;
+	text-align: center;
+	align-items: center;
+	flex-wrap: none;
+	justify-content: center;
+}	
+.file {
+	text-align: center;
+}
+h1{
+	font-size: 50px;
+	color: yellow;
+}
+
+input {
+	width: 500px;
+	border: none;
+}
+
+.button {
+	width: 150px;
+	border: none;
+	height: 50px;
+	background-color: yellow;
+}
+.button:hover {
+	background-color: green;
+}
+
+.small {
+	width: 200px;
+	border: none;
+}

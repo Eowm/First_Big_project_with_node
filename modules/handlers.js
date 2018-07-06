@@ -20,6 +20,16 @@ exports.welcome = function(request, response) {
         response.write(html);
         response.end();
     })
+     
+}
+
+exports.css = function(request, response) {
+    console.log("Rozpoczynam obsługę żądania css.");
+    fs.readFile('templates/style.css', function(err, css) {
+        response.writeHead(200, {"Content-Type": "text/css; charset=utf-8"});
+        response.write(css);
+        response.end();
+    })
 }
 
 exports.error = function(request, response) {
